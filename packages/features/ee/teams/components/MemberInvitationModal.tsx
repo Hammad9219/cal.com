@@ -53,7 +53,7 @@ export default function MemberInvitationModal(props: MemberInvitationModalProps)
   const validateUniqueInvite = (value: string) => {
     return !(
       props.members.some((member) => member?.username === value) ||
-      props.members.some((member) => member?.email === value)
+      props.members.some((member) => member?.email === value.trim())
     );
   };
 
